@@ -9,26 +9,37 @@ import com.example.si_mobile_demo.ui.screen.login.LoginScreen
 import com.example.si_mobile_demo.ui.screen.splash.SplashScreen
 
 @Composable
-fun AppNavHost(navController: NavHostController,
-               modifier: Modifier = Modifier
+fun AppNavHost(
+    navController: NavHostController,
+    modifier: Modifier = Modifier
 ) {
     NavHost(
         navController = navController,
-        startDestination = SplashRouteData,
+        startDestination = SplashRoute,
         modifier = modifier
     ) {
-        composable<SplashRouteData> {
-            SplashScreen(onNavigateToLogin = {
-                navController.navigate(LoginRouteData){
-                    popUpTo(SplashRouteData){
-                        inclusive = true
+        composable<SplashRoute> {
+            SplashScreen(
+                onNavigateToLogin = {
+                    navController.navigate(LoginRoute) {
+                        popUpTo<SplashRoute> { inclusive = true }
                     }
                 }
-            })
+            )
         }
 
-        composable<LoginRouteData> {
-            LoginScreen()
+        composable<LoginRoute> {
+            LoginScreen(
+                onLoginSuccess = {
+                    navController.navigate(MainRoute) {
+                        popUpTo<LoginRoute> { inclusive = true }
+                    }
+                }
+            )
+        }
+
+        composable<MainRoute> {
+            MainNavGraph()
         }
     }
 }

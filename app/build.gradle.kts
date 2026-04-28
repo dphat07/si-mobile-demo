@@ -41,7 +41,6 @@ android {
 dependencies {
     implementation(libs.androidx.benchmark.traceprocessor)
     implementation(libs.androidx.compose.foundation.layout)
-    val nav_version = "2.9.8"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -60,14 +59,13 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
 
     implementation("com.airbnb.android:lottie-compose:6.4.0")
-    implementation("androidx.navigation:navigation-compose:2.7.7")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.6.0")
     implementation("io.coil-kt.coil3:coil-compose:3.4.0")
     implementation("io.coil-kt.coil3:coil-network-okhttp:3.4.0")
     implementation("androidx.compose.material:material-icons-core")
     implementation("androidx.compose.material:material-icons-extended")
-    implementation("androidx.navigation:navigation-compose:${nav_version}")
+    implementation("androidx.navigation:navigation-compose:2.9.8")
     implementation(libs.kotlinx.serialization.json)
     implementation("androidx.compose.ui:ui-text-google-fonts:1.10.5")
 
