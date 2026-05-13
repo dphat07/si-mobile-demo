@@ -1,0 +1,4 @@
+package com.example.si_mobile_demo.data.model
+
+class AuthInfo {
+}

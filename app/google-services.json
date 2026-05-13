@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "763173562319",
+    "firebase_url": "https://si-web-staging-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "si-web-staging",
+    "storage_bucket": "si-web-staging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763173562319:android:185cb4b5a3014b7cda54ba",
+        "android_client_info": {
+          "package_name": "com.example.si_mobile_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763173562319-c06bente7o3ec9s72dej1e3oqehfit5i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbruYpK5FUJdeOZGTyrw_2WH9W7QeeW9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763173562319-c06bente7o3ec9s72dej1e3oqehfit5i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
