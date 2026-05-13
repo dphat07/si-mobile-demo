@@ -8,6 +8,8 @@ sealed interface AppRoute
 
 @Serializable data object LoginRoute : AppRoute
 
+@Serializable data object SelectClassRoute : AppRoute
+
 @Serializable data object MainRoute : AppRoute
 
 @Serializable data object SearchRoute : AppRoute
