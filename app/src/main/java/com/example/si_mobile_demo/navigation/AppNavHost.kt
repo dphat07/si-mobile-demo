@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.si_mobile_demo.ui.screen.login.LoginScreen
+import com.example.si_mobile_demo.ui.screen.select_class.SelectClassScreen
 import com.example.si_mobile_demo.ui.screen.splash.SplashScreen
 
 @Composable
@@ -29,13 +30,11 @@ fun AppNavHost(
         }
 
         composable<LoginRoute> {
-            LoginScreen(
-                onLoginSuccess = {
-                    navController.navigate(MainRoute) {
-                        popUpTo<LoginRoute> { inclusive = true }
-                    }
-                }
-            )
+            LoginScreen(navController = navController)
+        }
+
+        composable<SelectClassRoute> {
+            SelectClassScreen(navController = navController)
         }
 
         composable<MainRoute> {

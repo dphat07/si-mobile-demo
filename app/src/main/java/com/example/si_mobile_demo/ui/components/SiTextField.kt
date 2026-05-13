@@ -66,6 +66,11 @@ fun SiTextField(
         }
     }
 
+    val borderColor = when {
+        uiState.isError == true -> PrimitiveColors.Red
+        else -> PrimitiveColors.BlueDeep
+    }
+
 
     Column(modifier = modifier.fillMaxWidth()) {
         Text(
@@ -81,9 +86,8 @@ fun SiTextField(
                 .fillMaxWidth()
                 .height(48.dp)
                 .border(
-                    color = PrimitiveColors.BlueDeep,
+                    color = borderColor,
                     width = 1.dp,
-
                     shape = PrimitiveShape.Lg
                 )
                 .background(color = PrimitiveColors.White, shape = PrimitiveShape.Lg)
@@ -132,6 +136,14 @@ fun SiTextField(
                 }
             }
         )
+        if (uiState.isError == true) {
+            Text(
+                text = uiState.errorMessage ?: "",
+                color = PrimitiveColors.Red,
+                style = SiMobileDemoTheme.typography.body1,
+                modifier = Modifier.padding(top = 4.dp, start = 8.dp)
+            )
+        }
     }
 }
 
